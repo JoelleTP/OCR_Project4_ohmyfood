@@ -1,0 +1,26 @@
+/***Header***/
+.navbar {
+    @include flexbox_row;
+    @include center;
+    padding: 19px 0 14px 0;
+    position: relative;
+    @media (min-width: 1024px) {
+        padding: 30px;
+    }
+    .navbar__img {
+        width: 162px;
+        height: 30px;
+        @media (min-width: 1024px) {
+            width: 200px;
+            height: 34px;
+        }
+    }
+    .navbar__icon {
+        position: absolute;
+        left: 23px;
+        .fa-solid {
+            font-size: 16px;
+            color: $footer_color;
+        }
+    }
+}

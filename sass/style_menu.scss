@@ -1,0 +1,243 @@
+/****General****/
+@import "variables";
+@import "mixin";
+
+body {
+    margin: 0;
+}
+
+ /***Header***/
+ .navbar {
+    @include flexbox_row;
+    @include center;
+    padding: 19px 0 14px 0;
+    position: relative;
+    @media (min-width: 1024px) {
+        padding: 30px;
+    }
+    .navbar__img {
+        width: 162px;
+        height: 30px;
+        @media (min-width: 1024px) {
+            width: 200px;
+            height: 34px;
+        }
+    }
+    .navbar__icon {
+        position: absolute;
+        left: 23px;
+        .fa-solid {
+            font-size: 16px;
+            color: $footer_color;
+        }
+    }
+}
+
+.image__img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 0;
+    @media (min-width: 1024px) {
+        height: 383px;
+    }
+}
+
+.menu {
+    @include flexbox_column;
+    border-radius: 40px 40px 0 0;
+    background-color: $main_background_color;
+    width: 100%;
+    max-width: 1055px;
+    padding: 17px;
+    box-sizing: border-box;
+    margin: -40px auto 0 auto;
+    z-index: 1;
+    position: relative;
+    .menu__title {
+        @include flexbox_row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px auto 0 auto;
+        width: 100%;
+        max-width: 341px;
+        .main__title {
+            @include main_title;
+        }
+        .menu__icon {
+            padding-right: 25px;
+            position: relative;
+            width: 22px;
+            height: 22px;
+            .heart-empty {
+                opacity: 1;
+                position: absolute;
+                font-size: 22px;
+                color: $title_color;
+            }
+            .heart-full {
+                position: absolute;
+                font-size: 22px;
+                background: $btn_color;
+                background-clip: text;
+                color: transparent;
+                opacity: 0;
+            }
+            &:hover {
+                .heart-empty {
+                    transition: 0.5s linear;
+                    opacity:0 ;
+                }
+                .heart-full {
+                    transition: 0.5s linear;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .container {
+        @include flexbox_column;
+        gap: 12px;
+        margin: 40px auto 0 auto;
+        box-sizing: border-box;
+        max-width: 634px;
+        width: 100%;
+        .dishes__type {
+            @include dishes_type;
+            padding-bottom: 8px;
+            border-bottom: 3px solid $green_color;
+            width: 40px;
+        }
+        .cards {
+            @include cards;
+            @include flexbox_row;
+            box-shadow: 0px 4.01px 15.04px 0px #0000001A;/*à vérifier*/
+            height: 69px;
+            position: relative;
+            .cards-text {
+                padding: 15px;
+                width: 100%;
+                transition: width 500ms;
+                position: absolute;
+                box-sizing: border-box;
+            }
+            .cards__title {
+                @include dishes_title;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            .cards__description {
+                @include flexbox_row;
+                justify-content: space-between;
+                
+                .cards__subtitle {
+                    @include dishes_description;
+                    padding-top: 3px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                .cards__price {
+                    @include dishes_description;
+                    padding-top: 3px;
+                }
+            }
+            .cards_click {
+                width: 59px;
+                background-color: $green_color;
+                height: 100%;
+                @include flexbox_row;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0 15px 15px 0;
+                position: absolute;
+                right: 0;
+                transform-origin: 100% 50%;
+                transition: all 500ms;
+                // transform: translateX(59px);
+                // opacity: 0;
+                transform: scaleX(0);
+                overflow: hidden;
+                .fa-circle-check {
+                    color: white;
+                    font-size: 20px;
+                }
+            }
+            &:hover {
+                .cards_click {
+                    transform: scaleX(1);
+                    // transform: translateX(0);
+                    // opacity: 1;
+                    transition: all 500ms;
+                    overflow: hidden;
+                }
+                .cards-text {
+                    transition: width 500ms;
+                    width: calc(100% - 59px);
+                }
+            }
+        }
+    }
+    .intro__btn {
+        @include btn;
+        display: block;
+        width: 158px;
+        margin: 40px auto;
+    }
+    
+}
+/***Footer***/
+.footer {
+    background-color: $footer_color;
+    color: white;
+    padding: 22px 25px;
+    @media (min-width: 1024px) {
+        @include flexbox_row;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        gap: 30px;
+    }
+    .footer__list {
+        padding: 0;
+        list-style-type: none;
+        margin-bottom: 0;
+        @include flexbox_column;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+        @media (min-width: 1024px) {
+            flex-direction: row; 
+        }
+        .footer__listpoint {
+            @include flexbox_row;
+            gap: 10px;
+            .footer__link {
+                text-decoration: none;
+                color: inherit;
+                @include main_txt;
+                color: white;
+            }
+        }
+        .footer__link {
+            text-decoration: none;
+            color: inherit;
+            @include main_txt;
+            font-weight: 400;
+            color: white;
+        }
+        .footer__icon {
+            font-size: 13px;
+            width: 11px;
+        }
+        .fa-handshake-angle {
+            font-size: 11px;
+            transform: rotate(-10deg);
+        }
+        
+    }
+}
+
+

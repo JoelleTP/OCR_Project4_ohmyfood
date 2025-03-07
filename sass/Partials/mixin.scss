@@ -1,0 +1,96 @@
+@mixin main_title {
+    font-weight: 700;
+    font-size: 24px;
+    color: $blacktxt_color;
+    margin: 0;
+}
+
+@mixin subtitle {
+    font-weight: 300;
+    font-size: 18px;
+    color: $footer_color;
+    text-align: center;
+}
+
+@mixin main_txt {
+    font-weight: 500;
+    font-size: 16px;
+    color: $blacktxt_color;
+    margin: 0;
+    font-family: $main_family;
+}
+
+@mixin btn {
+    @include main_txt;
+    padding: 16px 19px;
+    border-radius: 25px;
+    background: linear-gradient($pink_color, $purple_color); 
+    box-shadow: 0px 4px 10px 0px #00000040; /*à vérifier*/
+    color: $whitetxt_color;
+    text-align: center;
+    text-decoration: none;
+}
+
+@mixin cards {
+    border-radius: 15px;
+    background-color: white;
+}
+
+@mixin cards_title {
+    font-weight: 700;
+    font-size: 18px;
+    color: $blacktxt_color;
+    margin: 0;
+}
+
+@mixin cards_subtitle {
+    font-weight: 300;
+    font-size: 17px;
+    color: $blacktxt_color;
+    margin: 0;
+}
+
+@mixin flexbox_row {
+    display: flex;
+}
+
+@mixin flexbox_column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin center {
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin main_title_menu {
+    font-family: 'Shrikhand', sans-serif; 
+    font-weight: 400;
+    font-size: 28px;
+    margin: 0;
+    color: $title_color;
+}
+
+@mixin dishes_type {
+    font-family: $main_family;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+@mixin dishes_title {
+    font-family: $main_family;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0;
+}
+
+@mixin dishes_description {
+    font-family: $main_family;
+    font-weight: 300;
+    font-size: 15px;
+    margin: 0;
+}
+

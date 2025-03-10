@@ -1,0 +1,183 @@
+/****General****/
+@import "Partials/general.scss";
+@import "Partials/variables.scss";
+@import "Partials/mixin.scss";
+@import "Partials/header.scss";
+@import "Partials/footer.scss";
+
+ /***Position***/
+ .position {
+    @include flexbox_row;
+    @include center;
+    background-color: $position_background_color;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+    box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.26);
+    height: 50px;
+    @media (min-width: 1024px) {
+        filter: none;
+        box-shadow: none;
+    }
+    &__icon {
+        font-size: $txt_size;
+        color: $tertiarytxt_color;
+    }
+    &__txt {
+        @include main_txt;
+        color: $tertiarytxt_color;
+        border: none;
+        background-color: $position_background_color;
+        text-align: center;
+        width: 150px; 
+        &::placeholder {
+            @include main_txt;
+            color: $tertiarytxt_color;
+        }  
+    }
+ }
+
+ /***Intro***/
+.intro {
+    background-color: $second_background_color;
+    padding: 40px 30px;
+    @media (min-width: 1024px) {
+        padding: 20px 0;
+    }
+    &__title {
+        text-align: center;
+        @include main_title;
+        padding: 0 20px 20px 20px;
+        @media (min-width: 1024px) {
+            font-size: 40px;
+        }
+    }
+    &__subtitle {
+        @include subtitle;
+        padding-bottom: 10px;
+    }
+    .btn {
+        @include btn;
+    }
+}
+
+/***Tutoriel du site***/
+.tuto {
+    padding: 50px 20px;
+    @media (min-width: 1024px) {
+        padding: 50px 12%;
+    }
+    &__title {
+        @include main_title;
+    }
+    &__boxcontainer {
+        @include flexbox_column;
+        margin: 30px 0 0 12px;
+        gap: 20px;
+        @media (min-width: 1024px) {
+            flex-direction: row;
+            gap: 30px;
+        }
+        .box {
+            position: relative;
+            max-width: 230px;
+            background: $second_background_color;
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px 0px #00000026;/*à vérifier*/
+            padding: 28px 55px 28px 40px;
+            @include flexbox_row;
+            gap: 30px;
+            .box__title {
+                @include main_txt;
+            }
+            &__icon {
+                color: #7e7e7e;
+                display: block;
+                width: 18px;
+                font-size: 18px;
+                &--purple {
+                    color: $primary_color;
+                }
+            }
+            &__numberlabel {
+                position: absolute;
+                border-radius: 50%;
+                background-color: $primary_color;
+                color: $secondtxt_color;
+                left: -12px;
+                font-size: $little_txt_size;
+                font-family: $main_fontfamily;
+                font-weight: 500;
+                padding: 4px 8px;
+            }
+        }
+    }        
+}
+
+/***Restaurants***/
+.restaurants {
+    padding: 50px 20px;
+    background-color: $second_background_color;
+    @media (min-width: 1024px) {
+        padding: 50px 12%;
+    }
+    &__title {
+        @include main_title;
+    }
+    &__cardscontainer {
+        @include flexbox_column;
+        margin-top: 20px;
+        gap: 20px;
+        @media (min-width: 1024px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px 50px;
+        }
+        .cards {
+            position: relative;
+            @include flexbox_column;
+            @include cards;
+            max-width: 800px;
+            margin: auto;
+            &__img {
+                height: 170px;
+                width: 100%;
+                border-radius: 15px 15px 0 0;
+                object-fit: cover;
+            }
+            &__new {
+                @include main_txt;
+                position: absolute;
+                padding: 7px 10px;
+                background-color: $tertiary_color;
+                color: $darktertiary_color;
+                font-size: $little_txt_size;
+                top: 15px;
+                right: 10px;
+            }
+            &__content {
+                @include flexbox_row;
+                align-items: center;
+                width: 100%;
+                justify-content: space-between;
+                border-radius: 0 0 15px 15px;
+                padding: 15px 10px;
+                box-sizing: border-box;
+                .cards__title {
+                    @include cards_title;
+                    padding-bottom: 5px;
+                }
+                .cards__subtitle {
+                    @include cards_subtitle;
+                }
+                .cards__icon {
+                    @include heart;
+                }
+            }
+            
+        }
+    }
+}
+
+
+
+
+

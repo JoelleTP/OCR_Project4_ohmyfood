@@ -7,20 +7,19 @@
     @media (min-width: 1024px) {
         padding: 30px;
     }
-    .navbar__img {
+    &__img {
         width: 162px;
-        height: 30px;
+        height: 34px;
         @media (min-width: 1024px) {
             width: 200px;
-            height: 34px;
         }
     }
-    .navbar__icon {
+    &__link {
         position: absolute;
         left: 23px;
-        .fa-solid {
-            font-size: 16px;
-            color: $footer_color;
-        }
+    }
+    &__icon {
+        font-size: $txt_size;
+        color: $tertiarytxt_color;
     }
 }

@@ -1,13 +1,33 @@
-$purple_color: #9356DC;
-$pink_color: #FF79DA;
-$darkgreen_color: #008766;
-$green_color: #99E2D0;
-$blacktxt_color: #000000;
-$whitetxt_color: #FFFFFF;
-$main_background_color: #F6F6F6;
-$second_background_color: #EAEAEA;
-$footer_color: #353535;
-$btn_color: linear-gradient($pink_color, $purple_color);
+/***Main color***/
+$primary_color: #9356DC;
+$secondary_color: #FF79DA;
+$tertiary_color: #99E2D0;
+$darktertiary_color: #008766;
+
+/***Color txt***/
+$maintxt_color: #000000;
+$secondtxt_color: #FFFFFF;
 $title_color: #101010;
-$main_family: 'Roboto', sans-serif; 
+$tertiarytxt_color: #353535;
+
+/***Background color***/
+$main_background_color: #FFFFFF;
+$second_background_color: #F6F6F6;
+$position_background_color: #EAEAEA;
+$footer_background_color: #353535;
+$btn_color: linear-gradient(193.33deg, $primary_color -11.44%, $secondary_color 123.93%);
+
+/***Font-family***/
+$main_fontfamily: 'Roboto', sans-serif; 
+$second_fontfamily: 'Shrikhand', sans-serif; 
+
+/***Font-size***/
+$menu_title_size: 28px;
+$main_title_size: 24px;
+$secondary_title_size: 18px;
+$txt_size: 16px;
+$little_txt_size: 14px; 
+$heart_size: 22px;
+
+/***Space***/
 $main_space: 40px;

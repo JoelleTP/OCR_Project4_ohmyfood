@@ -1,0 +1,23 @@
+$num-dishes: 13;
+$anim-dur: 5s;
+$anim-delay: $anim-dur / $num-dishes;
+
+.dishes__entry {
+    animation: menu_entry 1s backwards;
+    @for $i from 1 through $num-dishes {
+        &--#{$i} {
+            animation-delay: $anim-delay * $i;
+        }
+    }
+}
+
+@keyframes menu_entry {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

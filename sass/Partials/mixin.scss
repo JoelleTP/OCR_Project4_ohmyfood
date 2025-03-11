@@ -1,3 +1,4 @@
+/***Mixin titre et logo page d'accueil et menu***/
 @mixin main_title {
     font-weight: 700;
     font-size: $main_title_size;
@@ -5,6 +6,42 @@
     font-family: $main_fontfamily;
 }
 
+@mixin main_title_menu {
+    font-family: $second_fontfamily;
+    font-weight: 400;
+    font-size: $menu_title_size;
+    color: $title_color;
+}
+
+@mixin cards_title {
+    font-weight: 700;
+    font-size: $secondary_title_size;
+    color: $maintxt_color;
+    font-family: $main_fontfamily;
+}
+
+@mixin dishes_type {
+    font-family: $main_fontfamily;
+    font-weight: 300;
+    font-size: $txt_size;
+    text-transform: uppercase;
+}
+
+@mixin dishes_title {
+    font-family: $main_fontfamily;
+    font-weight: 500;
+    font-size: $secondary_title_size;
+}
+
+@mixin footer__logo {
+    font-family: $second_fontfamily;
+    font-weight: 400;
+    font-size: $secondary_title_size;
+    color: $secondtxt_color;
+}
+
+
+/***Mixin mise en forme texte***/
 @mixin subtitle {
     font-weight: 300;
     font-size: $secondary_title_size;
@@ -20,6 +57,37 @@
     font-family: $main_fontfamily;
 }
 
+@mixin cards_subtitle {
+    font-weight: 300;
+    font-size: 17px;
+    color: $maintxt_color;
+    font-family: $main_fontfamily;
+}
+
+@mixin dishes_description {
+    font-family: $main_fontfamily;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+/***Mixin de mise en page flexbox***/
+@mixin flexbox_row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flexbox_column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin center {
+    align-items: center;
+    justify-content: center;
+}
+
+
+/***Mise en forme bouton rose et violet sur page d'accueil et menu + animation au passage de la souris***/
 @mixin btn {
     @include main_txt;
     padding: 15px 20px;
@@ -40,69 +108,18 @@
     }
 }
 
+/***Mise en forme carte page d'accueil et description menu***/
 @mixin cards {
     border-radius: 15px;
     background-color: $main_background_color;
 }
 
-@mixin cards_title {
-    font-weight: 700;
-    font-size: $secondary_title_size;
-    color: $maintxt_color;
-    font-family: $main_fontfamily;
-}
-
-@mixin cards_subtitle {
-    font-weight: 300;
-    font-size: 17px;
-    color: $maintxt_color;
-    font-family: $main_fontfamily;
-}
-
-@mixin flexbox_row {
-    display: flex;
-}
-
-@mixin flexbox_column {
-    display: flex;
-    flex-direction: column;
-}
-
-@mixin center {
-    align-items: center;
-    justify-content: center;
-}
-
-@mixin main_title_menu {
-    font-family: $second_fontfamily;
-    font-weight: 400;
-    font-size: $menu_title_size;
-    color: $title_color;
-}
-
-@mixin dishes_type {
-    font-family: $main_fontfamily;
-    font-weight: 300;
-    font-size: $txt_size;
-    text-transform: uppercase;
-}
-
-@mixin dishes_title {
-    font-family: $main_fontfamily;
-    font-weight: 500;
-    font-size: $secondary_title_size;
-}
-
-@mixin dishes_description {
-    font-family: $main_fontfamily;
-    font-weight: 300;
-    font-size: 15px;
-}
-
+/***Mixin mise en forme du coeur sur page d'accueil et menu + animation du coeur***/
 @mixin heart {
     position: relative;
     width: 22px;
     height: 22px;
+    
     .heart-empty {
         opacity: 1;
         position: absolute;
@@ -115,11 +132,12 @@
         background-clip: text;
         color: transparent;
         opacity: 0;
+        
     }
     &:hover {
         .heart-empty {
-            transition: 0.5s linear;
-            opacity:0 ;
+            transition: 1s linear;
+            opacity: 0;
         }
         .heart-full {
             transition: 0.5s linear;
@@ -128,10 +146,5 @@
     }
 }
 
-@mixin footer__logo {
-    font-family: $second_fontfamily;
-    font-weight: 400;
-    font-size: $secondary_title_size;
-    color: $secondtxt_color;
-}
+
 

@@ -20,9 +20,16 @@ ul {
 /***Font-family***/
 /***Font-size***/
 /***Space***/
+/***Mixin titre et logo page d'accueil et menu***/
+/***Mixin mise en forme texte***/
+/***Mixin de mise en page flexbox***/
+/***Mise en forme bouton rose et violet sur page d'accueil et menu + animation au passage de la souris***/
+/***Mise en forme carte page d'accueil et description menu***/
+/***Mixin mise en forme du coeur sur page d'accueil et menu + animation du coeur***/
 /***Header***/
 .navbar {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 19px 0 14px 0;
@@ -59,6 +66,7 @@ ul {
 @media (min-width: 1024px) {
   .footer {
     display: flex;
+    flex-direction: row;
     flex-direction: row-reverse;
     justify-content: flex-start;
     align-items: flex-end;
@@ -84,12 +92,14 @@ ul {
 }
 @media (min-width: 1024px) {
   .footer__list {
+    display: flex;
     flex-direction: row;
     gap: 10px;
   }
 }
 .footer__listpoint {
   display: flex;
+  flex-direction: row;
   gap: 10px;
 }
 .footer__link {
@@ -119,6 +129,7 @@ ul {
 /***Position***/
 .position {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: #EAEAEA;
@@ -232,6 +243,7 @@ ul {
 }
 @media (min-width: 1024px) {
   .tuto__boxcontainer {
+    display: flex;
     flex-direction: row;
     gap: 30px;
   }
@@ -244,6 +256,7 @@ ul {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078); /*à vérifier*/
   padding: 28px 55px 28px 40px;
   display: flex;
+  flex-direction: row;
   gap: 30px;
 }
 .tuto__boxcontainer .box .box__title {
@@ -332,6 +345,7 @@ ul {
 }
 .restaurants__cardscontainer .cards__content {
   display: flex;
+  flex-direction: row;
   align-items: center;
   width: 100%;
   justify-content: space-between;
@@ -371,7 +385,7 @@ ul {
   opacity: 0;
 }
 .restaurants__cardscontainer .cards__content .cards__icon:hover .heart-empty {
-  transition: 0.5s linear;
+  transition: 1s linear;
   opacity: 0;
 }
 .restaurants__cardscontainer .cards__content .cards__icon:hover .heart-full {

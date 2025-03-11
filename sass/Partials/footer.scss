@@ -20,7 +20,7 @@
         @include flexbox_column;
         gap: 7px;
         @media (min-width: 1024px) {
-            flex-direction: row;
+            @include flexbox_row;
             gap: 10px;
         }
     }

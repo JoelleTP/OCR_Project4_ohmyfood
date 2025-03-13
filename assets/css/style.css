@@ -234,11 +234,13 @@ ul {
 
 /***Tutoriel du site***/
 .tuto {
+  max-width: 1120px;
+  margin: auto;
   padding: 50px 20px 70px 20px;
 }
 @media (min-width: 1024px) {
   .tuto {
-    padding: 50px 180px;
+    padding-bottom: 50px;
   }
 }
 .tuto__title {
@@ -257,7 +259,6 @@ ul {
   .tuto__boxcontainer {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     gap: 35px;
   }
 }
@@ -268,7 +269,7 @@ ul {
   background: #F6F6F6;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  padding: 28px 35px;
+  padding: 28px 15px 28px 35px;
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -308,12 +309,16 @@ ul {
 
 /***Restaurants***/
 .restaurants {
-  padding: 55px 20px 65px 20px;
   background-color: #F6F6F6;
 }
+.restaurants__container {
+  max-width: 1120px;
+  margin: auto;
+  padding: 55px 20px 65px 20px;
+}
 @media (min-width: 1024px) {
-  .restaurants {
-    padding: 30px 180px;
+  .restaurants__container {
+    padding: 30px 20px;
   }
 }
 .restaurants__title {

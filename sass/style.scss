@@ -68,9 +68,11 @@
 
 /***Tutoriel du site***/
 .tuto {
+    max-width: 1120px;
+    margin: auto;
     padding: 50px 20px 70px 20px;
     @media (min-width: 1024px) {
-        padding: 50px 180px;
+        padding-bottom: 50px;
     }
     &__title {
         @include main_title;
@@ -81,7 +83,6 @@
         gap: 25px;
         @media (min-width: 1024px) {
             @include flexbox_row;
-            flex-wrap: wrap;
             gap: 35px;
         }
         .box {
@@ -91,7 +92,7 @@
             background: $second_background_color;
             border-radius: 20px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-            padding: 28px 35px;
+            padding: 28px 15px 28px 35px;
             @include flexbox_row;
             gap: 20px;
             margin: auto;
@@ -127,10 +128,14 @@
 
 /***Restaurants***/
 .restaurants {
-    padding: 55px 20px 65px 20px;
     background-color: $second_background_color;
-    @media (min-width: 1024px) {
-        padding: 30px 180px;
+    &__container {
+        max-width: 1120px;
+        margin: auto;
+        padding: 55px 20px 65px 20px;
+        @media (min-width: 1024px) {
+            padding: 30px 20px;
+        }
     }
     &__title {
         @include main_title;

@@ -13,18 +13,19 @@
 <body>
     <div class="loader">
         <p class="loader__logo">ohmyfood</p>
-        <div class="spinner">
-        </div>
+        <div class="spinner"></div>
     </div>
+
     <header class="loaded">
         <nav class="navbar">
             <img class="navbar__img" src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
         </nav>        
     </header>
+    
     <main class="loaded">
         <form class="position">
-            <i class="position__icon fa-solid fa-location-dot" aria-hidden="true"></i>
-            <input type="search" placeholder="Paris, Belleville" class="position__txt">
+            <label for="position"><i class="position__icon fa-solid fa-location-dot" aria-hidden="true"></i></label>
+            <input type="search" id="position" placeholder="Paris, Belleville" class="position__txt">
         </form>
 
         <section class="intro">
@@ -35,93 +36,93 @@
 
         <section class="tuto">
             <h2 class="tuto__title">Fonctionnement</h2>
-            <div class="tuto__boxcontainer">
-                <div class="box">
+            <ol class="tuto__boxcontainer">
+                <li class="box">
                     <p class="box__numberlabel">1</p>
                     <i class="box__icon fa-solid fa-mobile-screen-button"></i>
                     <p class="box__title">Choisissez un restaurant</p>
-                </div>
-                <div class="box">
+                </li>
+                <li class="box">
                     <p class="box__numberlabel">2</p>
                     <i class="box__icon fa-solid fa-list-ul"></i>
                     <p class="box__title">Composez votre menu</p>
-                </div>
-                <div class="box">
+                </li>
+                <li class="box">
                     <p class="box__numberlabel">3</p>
                     <i class="box__icon box__icon--purple fa-solid fa-store"></i>
                     <p class="box__title">Dégustez au restaurant</p>
-                </div>
-            </div>
+                </li>
+            </ol>
         </section>
         
         <section class="restaurants">
             <div class="restaurants__container">
-            <h2 class="restaurants__title">Restaurants</h2>
-            <div class="restaurants__cardscontainer">
-                <a href="./restaurants/La_Palette_du_Gout.html">
-                    <article class="cards">
-                        <img class="cards__img" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-                        <p class="cards__new">Nouveau</p>
-                        <div class="cards__content">
-                            <div>
-                                <h3 class="cards__title">La palette du goût</h3>
-                                <p class="cards__subtitle">Ménilmontant</p>
+                <h2 class="restaurants__title">Restaurants</h2>
+                <div class="restaurants__cardscontainer">
+                    <a href="./restaurants/La_Palette_du_Gout.html">
+                        <article class="cards">
+                            <img class="cards__img" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                            <p class="cards__new">Nouveau</p>
+                            <div class="cards__content">
+                                <div>
+                                    <h3 class="cards__title">La palette du goût</h3>
+                                    <p class="cards__subtitle">Ménilmontant</p>
+                                </div>
+                                <div class="cards__icon">
+                                    <i class="fa-regular fa-heart heart-empty" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-heart heart-full" aria-hidden="true"></i>
+                                </div>                            
                             </div>
-                            <div class="cards__icon">
-                                <i class="fa-regular fa-heart heart-empty" aria-hidden="true"></i>
-                                <i class="fa-solid fa-heart heart-full" aria-hidden="true"></i>
-                            </div>                            
-                        </div>
-                    </article>
-                </a>
-                <a href="./restaurants/La_note_enchantee.html">
-                    <article class="cards">
-                        <img class="cards__img" src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
-                        <p class="cards__new">Nouveau</p>
-                        <div class="cards__content">
-                            <div class="cards__title">
-                                <h3 class="cards__title">La note enchantée</h3>
-                                <p class="cards__subtitle">Charonne</p>
+                        </article>
+                    </a>
+                    <a href="./restaurants/La_note_enchantee.html">
+                        <article class="cards">
+                            <img class="cards__img" src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                            <p class="cards__new">Nouveau</p>
+                            <div class="cards__content">
+                                <div>
+                                    <h3 class="cards__title">La note enchantée</h3>
+                                    <p class="cards__subtitle">Charonne</p>
+                                </div>
+                                <div class="cards__icon">
+                                    <i class="fa-regular fa-heart heart-empty" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-heart heart-full" aria-hidden="true"></i>
+                                </div>  
                             </div>
-                            <div class="cards__icon">
-                                <i class="fa-regular fa-heart heart-empty" aria-hidden="true"></i>
-                                <i class="fa-solid fa-heart heart-full" aria-hidden="true"></i>
-                            </div>  
-                        </div>
-                    </article>
-                </a>
-                <a href="./restaurants/A_la_francaise.html">
-                    <article class="cards">
-                        <img class="cards__img" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
-                        <div class="cards__content">
-                            <div class="cards__title">
-                                <h3 class="cards__title">À la française</h3>
-                                <p class="cards__subtitle">Cité Rouge</p>
+                        </article>
+                    </a>
+                    <a href="./restaurants/A_la_francaise.html">
+                        <article class="cards">
+                            <img class="cards__img" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                            <div class="cards__content">
+                                <div>
+                                    <h3 class="cards__title">À la française</h3>
+                                    <p class="cards__subtitle">Cité Rouge</p>
+                                </div>
+                                <div class="cards__icon">
+                                    <i class="fa-regular fa-heart heart-empty" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-heart heart-full" aria-hidden="true"></i>
+                                </div>  
                             </div>
-                            <div class="cards__icon">
-                                <i class="fa-regular fa-heart heart-empty" aria-hidden="true"></i>
-                                <i class="fa-solid fa-heart heart-full" aria-hidden="true"></i>
-                            </div>  
-                        </div>
-                    </article>
-                </a>
-                <a href="./restaurants/Le_Delice_des_Sens.html">
-                    <article class="cards">
-                        <img class="cards__img" src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
-                        <div class="cards__content">
-                            <div class="cards__title">
-                                <h3 class="cards__title">Le délice des sens</h3>
-                                <p class="cards__subtitle">Folie-Méricourt</p>
+                        </article>
+                    </a>
+                    <a href="./restaurants/Le_Delice_des_Sens.html">
+                        <article class="cards">
+                            <img class="cards__img" src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+                            <div class="cards__content">
+                                <div>
+                                    <h3 class="cards__title">Le délice des sens</h3>
+                                    <p class="cards__subtitle">Folie-Méricourt</p>
+                                </div>
+                                <div class="cards__icon">
+                                    <i class="fa-regular fa-heart heart-empty" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-heart heart-full" aria-hidden="true"></i>
+                                </div>  
                             </div>
-                            <div class="cards__icon">
-                                <i class="fa-regular fa-heart heart-empty" aria-hidden="true"></i>
-                                <i class="fa-solid fa-heart heart-full" aria-hidden="true"></i>
-                            </div>  
-                        </div>
-                    </article>
-                </a>
+                        </article>
+                    </a>
+                </div>
             </div>
-        </div>
         </section>
     </main>
 

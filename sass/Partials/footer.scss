@@ -10,7 +10,10 @@
         gap: 16px;
     }
     &__logo {
-        @include footer__logo;
+        font-family: $second_fontfamily;
+        font-weight: normal;
+        font-size: $secondary_title_size;
+        color: $secondtxt_color;
         padding-bottom: 16px;
         width: 139px;
         @media (min-width: 1024px) {
@@ -32,14 +35,13 @@
     }
     &__link {
         @include main_txt;
-        font-weight: 400;
+        font-weight: normal;
         color: $secondtxt_color;
         &--nologo {
             display: block;
             width: 130px;
         }
     }
-
     &__icon {
         font-size: 13px;
         width: 11px;

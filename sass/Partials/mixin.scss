@@ -1,72 +1,27 @@
-/***Mixin titre et logo page d'accueil et menu***/
+/***Mixin titre page d'accueil et menu***/
 @mixin main_title {
-    font-weight: 700;
+    font-weight: bold;
     font-size: $main_title_size;
     color: $maintxt_color;
-    font-family: $main_fontfamily;
 }
 
 @mixin main_title_menu {
     font-family: $second_fontfamily;
-    font-weight: 400;
+    font-weight: normal;
     font-size: $menu_title_size;
     color: $title_color;
 }
 
-@mixin cards_title {
-    font-weight: 700;
-    font-size: $secondary_title_size;
-    color: $maintxt_color;
-    font-family: $main_fontfamily;
-}
-
-@mixin dishes_type {
-    font-family: $main_fontfamily;
-    font-weight: 300;
-    font-size: $txt_size;
-    text-transform: uppercase;
-}
-
-@mixin dishes_title {
-    font-family: $main_fontfamily;
-    font-weight: 500;
-    font-size: $secondary_title_size;
-}
-
-@mixin footer__logo {
-    font-family: $second_fontfamily;
-    font-weight: 400;
-    font-size: $secondary_title_size;
-    color: $secondtxt_color;
-}
-
-
 /***Mixin mise en forme texte***/
-@mixin subtitle {
-    font-weight: 300;
-    font-size: $secondary_title_size;
-    color: $tertiarytxt_color;
-    text-align: center;
-    font-family: $main_fontfamily;
-}
-
 @mixin main_txt {
-    font-weight: 500;
+    font-weight: $middle-font-weight;
     font-size: $txt_size;
-    color: $maintxt_color;
-    font-family: $main_fontfamily;
-}
-
-@mixin cards_subtitle {
-    font-weight: 300;
-    font-size: 17px;
     color: $maintxt_color;
     font-family: $main_fontfamily;
 }
 
 @mixin dishes_description {
-    font-family: $main_fontfamily;
-    font-weight: 300;
+    font-weight: $light-font-weight;
     font-size: 15px;
 }
 

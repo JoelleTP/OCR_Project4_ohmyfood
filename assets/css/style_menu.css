@@ -1,7 +1,18 @@
+@charset "UTF-8";
 /****General****/
+/***Main color***/
+/***Color txt***/
+/***Background color***/
+/***Font-family***/
+/***Font-size***/
+/***Font-weight***/
 * {
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -9,55 +20,51 @@ a {
   color: inherit;
 }
 
-ul {
+ul, ol {
   padding: 0;
   list-style-type: none;
 }
 
-/***Main color***/
-/***Color txt***/
-/***Background color***/
-/***Font-family***/
-/***Font-size***/
-/***Space***/
-/***Mixin titre et logo page d'accueil et menu***/
+/***Mixin titre page d'accueil et menu***/
 /***Mixin mise en forme texte***/
 /***Mixin de mise en page flexbox***/
 /***Mise en forme bouton rose et violet sur page d'accueil et menu + animation au passage de la souris***/
 /***Mise en forme carte page d'accueil et description menu***/
 /***Mixin mise en forme du coeur sur page d'accueil et menu + animation du coeur***/
 /***Header***/
-.navbar {
+header {
+  position: relative;
+  z-index: 1;
+}
+header .navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 20px 0 13px 0;
-  position: relative;
-  z-index: 2;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 @media (min-width: 1024px) {
-  .navbar {
+  header .navbar {
     padding: 30px 0;
     box-shadow: none;
   }
 }
-.navbar__img {
+header .navbar__img {
   width: 162px;
   height: 30px;
 }
 @media (min-width: 1024px) {
-  .navbar__img {
+  header .navbar__img {
     width: 200px;
     height: 34px;
   }
 }
-.navbar__link {
+header .navbar__link {
   position: absolute;
   left: 23px;
 }
-.navbar__icon {
+header .navbar__icon {
   font-size: 16px;
   color: #353535;
 }
@@ -79,7 +86,7 @@ ul {
 }
 .footer__logo {
   font-family: "Shrikhand", sans-serif;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 18px;
   color: #FFFFFF;
   padding-bottom: 16px;
@@ -113,7 +120,7 @@ ul {
   font-size: 16px;
   color: #000000;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: normal;
   color: #FFFFFF;
 }
 .footer__link--nologo {
@@ -131,6 +138,7 @@ ul {
   transform: rotate(-10deg);
 }
 
+/***Animation apparition du menu en décalé***/
 .dishes__entry {
   animation: menu_entry 1s backwards;
 }
@@ -191,7 +199,7 @@ ul {
   object-fit: cover;
   display: block;
   position: relative;
-  z-index: 3;
+  z-index: 1;
 }
 @media (min-width: 1024px) {
   .image {
@@ -209,7 +217,7 @@ ul {
   max-width: 1055px;
   padding: 0 13px;
   margin: -55px auto 0 auto;
-  z-index: 4;
+  z-index: 2;
   position: relative;
   overflow: hidden;
 }
@@ -236,7 +244,7 @@ ul {
 }
 .menu__title .main__title {
   font-family: "Shrikhand", sans-serif;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 28px;
   color: #101010;
 }
@@ -276,13 +284,16 @@ ul {
   width: 100%;
 }
 .menu .dishes__type .dishes__title {
-  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 16px;
   text-transform: uppercase;
-  padding-bottom: 5px;
+}
+.menu .dishes__type .dishes__title::after {
+  content: "";
   border-bottom: 3px solid #99E2D0;
   width: 40px;
+  display: block;
+  margin-top: 5px;
 }
 .menu .dishes__type .cards {
   border-radius: 15px;
@@ -302,7 +313,6 @@ ul {
   transition: width 500ms ease-in-out;
 }
 .menu .dishes__type .cards__text .cards__title {
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 18px;
   text-overflow: ellipsis;
@@ -315,7 +325,6 @@ ul {
   justify-content: space-between;
 }
 .menu .dishes__type .cards__text .cards__description .cards__subtitle {
-  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 15px;
   text-overflow: ellipsis;
@@ -323,10 +332,9 @@ ul {
   overflow: hidden;
 }
 .menu .dishes__type .cards__text .cards__description .cards__price {
-  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: bold;
 }
 .menu .dishes__type .cards__click {
   width: 59px;
@@ -334,8 +342,8 @@ ul {
   height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   border-radius: 0 15px 15px 0;
   position: absolute;
   right: 0;

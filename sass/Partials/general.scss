@@ -3,12 +3,16 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: $main_fontfamily;
+}
+
 a {
     text-decoration: none;
     color: inherit;
 }
 
-ul {
+ul, ol {
     padding: 0;
     list-style-type: none;
 }

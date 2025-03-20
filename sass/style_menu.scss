@@ -1,6 +1,6 @@
 /****General****/
-@import "Partials/general.scss";
 @import "Partials/variables.scss";
+@import "Partials/general.scss";
 @import "Partials/mixin.scss";
 @import "Partials/header.scss";
 @import "Partials/footer.scss";
@@ -13,7 +13,7 @@
     object-fit: cover;
     display: block;
     position: relative;
-    z-index: 3;
+    z-index: 1;
     @media (min-width: 1024px) {
         height: 383px;
     }
@@ -28,7 +28,7 @@
     max-width: 1055px;
     padding: 0 13px;
     margin: -55px auto 0 auto;
-    z-index: 4;
+    z-index: 2;
     position: relative;
     overflow: hidden;
     @media (min-width: 1024px) {
@@ -61,10 +61,16 @@
         max-width: 634px;
         width: 100%;
         .dishes__title {
-            @include dishes_type;
-            padding-bottom: 5px;
-            border-bottom: 3px solid $tertiary_color;
-            width: 40px;
+            font-weight: $light-font-weight;
+            font-size: $txt_size;
+            text-transform: uppercase;            
+            &::after {
+                content: "";
+                border-bottom: 3px solid $tertiary_color;
+                width: 40px;
+                display: block;
+                margin-top: 5px;
+            }
         }
         .cards {
             @include cards;
@@ -79,7 +85,8 @@
                 width: 100%;
                 transition: width 500ms ease-in-out;
                 .cards__title {
-                    @include dishes_title;
+                    font-weight: $middle-font-weight;
+                    font-size: $secondary_title_size;
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
@@ -95,7 +102,7 @@
                     }
                     .cards__price {
                         @include dishes_description;
-                        font-weight: 700;
+                        font-weight: bold;
                     }
                 }
             }
@@ -104,8 +111,7 @@
                 background-color: $tertiary_color;
                 height: 100%;
                 @include flexbox_row;
-                justify-content: center;
-                align-items: center;
+                @include center;
                 border-radius: 0 15px 15px 0;
                 position: absolute;
                 right: 0;

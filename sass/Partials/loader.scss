@@ -1,3 +1,4 @@
+/***Définition du loader + animation disparition du loader et apparition de la page d'accueil lors du chargement***/
 .loader {
     position: fixed;
     top: 50%;
@@ -7,13 +8,14 @@
     .loader__logo {
         @include main_title_menu;
         position: absolute;
-        color: black;
+        color: $maintxt_color;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
-        background-color: white;
+        background-color: $main_background_color;
         border-radius: 20px;
+        padding: 0 5px;
     }
 }
 
@@ -30,6 +32,7 @@
     animation: loaded 1s 3s ease-in-out reverse both;
 }
 
+/***Définition et animation du spinner autour du logo ohmyfood***/
 .spinner {
     width: 170px;
     height: 170px;

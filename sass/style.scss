@@ -1,10 +1,15 @@
 /****General****/
-@import "Partials/general.scss";
 @import "Partials/variables.scss";
+@import "Partials/general.scss";
 @import "Partials/mixin.scss";
 @import "Partials/loader.scss";
 @import "Partials/header.scss";
 @import "Partials/footer.scss";
+
+main {
+    position: relative;
+    z-index: 0;
+}
 
  /***Position***/
  .position {
@@ -31,6 +36,7 @@
         width: 150px; 
         &::placeholder {
             @include main_txt;
+            font-family: $main_fontfamily;
             color: $tertiarytxt_color;
         }  
     }
@@ -55,7 +61,10 @@
         }
     }
     &__subtitle {
-        @include subtitle;
+        font-weight: $light-font-weight;
+        font-size: $secondary_title_size;
+        color: $tertiarytxt_color;
+        text-align: center;
     }
     .btn {
         @include btn;
@@ -119,8 +128,7 @@
                 color: $secondtxt_color;
                 left: -12px;
                 font-size: $little_txt_size;
-                font-family: $main_fontfamily;
-                font-weight: 500;
+                font-weight: $middle-font-weight;
                 padding: 4px 8px;
             }
         }
@@ -181,11 +189,15 @@
                 border-radius: 0 0 15px 15px;
                 padding: 16px 25px 13px 13px;
                 .cards__title {
-                    @include cards_title;
+                    font-weight: bold;
+                    font-size: $secondary_title_size;
+                    color: $maintxt_color;
                     padding-bottom: 5px;
                 }
                 .cards__subtitle {
-                    @include cards_subtitle;
+                    font-weight: $light-font-weight;
+                    font-size: 17px;
+                    color: $maintxt_color;
                 }
                 .cards__icon {
                     @include heart;
